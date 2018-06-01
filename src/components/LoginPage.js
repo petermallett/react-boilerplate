@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startLogin } from '../actions/auth';
+import { startLoginAction } from '../actions/auth';
 
-export const LoginPage = ({ startLogin }) => (
+export const UCLoginPage = ({ startLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
       <h1 className="box-layout__title">Boilerplate</h1>
@@ -13,7 +13,7 @@ export const LoginPage = ({ startLogin }) => (
 );
 
 const mapDispatchToProps = (dispatch) => ({
-  startLogin: () => dispatch(startLogin())
+  startLogin: () => dispatch(startLoginAction())
 });
 
-export default connect(undefined, mapDispatchToProps)(LoginPage);
+export default connect(undefined, mapDispatchToProps)(UCLoginPage);

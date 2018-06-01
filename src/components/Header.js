@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { startLogout } from '../actions/auth';
+import { startLogoutAction } from '../actions/auth';
 
-export const Header = ({ startLogout }) => (
+export const UCHeader = ({ startLogout }) => (
   <header className="header">
     <div className="content-container">
       <div className="header__content">
@@ -17,7 +17,7 @@ export const Header = ({ startLogout }) => (
 );
 
 const mapDispatchToProps = (dispatch) => ({
-  startLogout: () => dispatch(startLogout())
+  startLogout: () => dispatch(startLogoutAction())
 });
 
-export default connect(undefined, mapDispatchToProps)(Header);
+export default connect(undefined, mapDispatchToProps)(UCHeader);

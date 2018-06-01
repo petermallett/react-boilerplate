@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { LoginPage } from '../../components/LoginPage';
+import { UCLoginPage } from '../../components/LoginPage';
 
-let startLogin, wrapper;
+let startLogin;
+let wrapper;
 
 beforeEach(() => {
   startLogin = jest.fn();
-  wrapper = shallow(<LoginPage startLogin={startLogin} />);
+  wrapper = shallow(<UCLoginPage startLogin={startLogin} />);
 });
 
 test('should correctly render LoginPage correctly', () => {

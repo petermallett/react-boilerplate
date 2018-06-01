@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Header } from '../../components/Header';
+import { UCHeader } from '../../components/Header';
 
-let startLogout, wrapper;
+let startLogout;
+let wrapper;
 
 beforeEach(() => {
   startLogout = jest.fn();
-  wrapper = shallow(<Header startLogout={startLogout} />);
+  wrapper = shallow(<UCHeader startLogout={startLogout} />);
 });
 
 test('should render Header correctly', () => {
