@@ -1,16 +1,18 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "settings": {
-        "react": {
-            "createClass": "createReactClass",
-            "pragma": "React",
-            "version": "16.0",
-            "flowVersion": "0.53"
-        },
-        "propWrapperFunctions": [ "forbidExtraProps" ]
-      }
+    "env": {
+        "browser": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "arrow-body-style": "off",
+        "arrow-parens": "off",
+        "comma-dangle": 0,
+        "jsx-a11y/anchor-is-valid": [ "error", {
+            "components": [ "Link" ],
+            "specialLink": [ "to" ]
+        }],
+        "react/jsx-boolean-value": false,
+        "react/jsx-filename-extension": false,
+        "react/prop-types": false
+    }
 }
